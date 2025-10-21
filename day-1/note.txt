@@ -1,0 +1,18 @@
+The main objective of Task Day 1 was to understand how to load a JavaScript file (script.js) within an HTML document. When placing the script in the <head>, it successfully displayed the text "Check the browser console for a message!" but produced a warning. Conversely, placing the script in the <body> also successfully displayed the message with no errors or warnings. However, using the defer or async attributes failed to display the message and resulted in the console message: "script was ignored". This behavior is explained by the document.write() method. document.write() is a JavaScript method used to write HTML markup or text directly to the browser while the page is actively being loaded (parsed). This is why loading script.js from both the head and body worked. The failure with defer occurred because document.write() was called after the page had finished loading. When document.write() is called on a fully loaded document, it automatically triggers document.open(), which clears all existing page content and replaces it with the new content.
+
+
+
+
+
+
+
+
+
+
+poin utama dari task day 1 adalah memahami bagaimana kita me load script.js pada html.
+1. menaruh script di head, berhasil menampilkan tulisan "Check the browser console for a message!" pada browser, namun terdapat warning.
+2. menaruh script di body berhasil menampilkan tulisan "Check the browser console for a message!" dan tidak ada error maupun warning.
+3. defer dan asyn tidak menampilkan tulisan "Check the browser console for a message!" dan terdapat pesan "script was ignored
+
+
+document.write() adalah metode JavaScript yang digunakan untuk menulis markup HTML atau teks langsung ke browser saat halaman sedang dimuat (diparsing oleh browser), maka dari itu me load script.js dari body dan head berhasil menampilkan tulisannya. sementara defer gagal menampilkan tulisannya karna document.write() dipanggil setelah halaman selesai dimuat dan akan secara otomatis memanggil document.open(), yang menghapus seluruh konten halaman yang sudah ada dan menggantinya dengan konten baru.
