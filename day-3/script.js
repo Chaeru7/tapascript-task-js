@@ -1,6 +1,6 @@
 // task 1
-let number = 2;
-const kindOfNumber = (number % 2) ? 'odd' : 'even';
+let number = 6;
+const kindOfNumber = (number % 2) ? 'even' : 'odd';
 console.log(`The number ${number} is ${kindOfNumber}.`);
 
 //task 2
